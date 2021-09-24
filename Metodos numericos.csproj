@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5521DCB7-7AF2-4224-8940-9B66A06BAD40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>raizesMN</RootNamespace>
+    <AssemblyName>raizesMN</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CDatosFourier.cs" />
+    <Compile Include="formFourier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formFourier.Designer.cs">
+      <DependentUpon>formFourier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SolucionSEL\CResolverSEL.cs" />
+    <Compile Include="Optimizacion\formOptimizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Optimizacion\formOptimizar.Designer.cs">
+      <DependentUpon>formOptimizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raizes\CPolinomio.cs" />
+    <Compile Include="EqnDiferenciales\formEqnDiferenciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EqnDiferenciales\formEqnDiferenciales.Designer.cs">
+      <DependentUpon>formEqnDiferenciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integracion\formIntegracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integracion\formIntegracion.Designer.cs">
+      <DependentUpon>formIntegracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interpolacion\CCalcular2.cs" />
+    <Compile Include="Interpolacion\CInterpolar.cs" />
+    <Compile Include="Interpolacion\CTablaDatos.cs" />
+    <Compile Include="Interpolacion\formInterpolacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interpolacion\formInterpolacion.Designer.cs">
+      <DependentUpon>formInterpolacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SolucionSEL\CMatriz.cs" />
+    <Compile Include="SolucionSEL\formSEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SolucionSEL\formSEL.Designer.cs">
+      <DependentUpon>formSEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMenuprincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMenuprincipal.Designer.cs">
+      <DependentUpon>formMenuprincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramaGrafica\CSeguridadGraf.cs" />
+    <Compile Include="ProgramaGrafica\CColorFuncion.cs" />
+    <Compile Include="Raizes\CAyuda.cs" />
+    <Compile Include="Raizes\CCalcular1.cs" />
+    <Compile Include="Raizes\CRaizes.cs" />
+    <Compile Include="Raizes\CTabular.cs" />
+    <Compile Include="Raizes\raicesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raizes\raicesForm.Designer.cs">
+      <DependentUpon>raicesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramaGrafica\formFuncion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramaGrafica\formFuncion.Designer.cs">
+      <DependentUpon>formFuncion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramaGrafica\Gráfica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramaGrafica\Gráfica.Designer.cs">
+      <DependentUpon>Gráfica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathParser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabularFuncion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabularFuncion.Designer.cs">
+      <DependentUpon>TabularFuncion.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EqnDiferenciales\formEqnDiferenciales.resx">
+      <DependentUpon>formEqnDiferenciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formFourier.resx">
+      <DependentUpon>formFourier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Optimizacion\formOptimizar.resx">
+      <DependentUpon>formOptimizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integracion\formIntegracion.resx">
+      <DependentUpon>formIntegracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interpolacion\formInterpolacion.resx">
+      <DependentUpon>formInterpolacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raizes\raicesForm.resx">
+      <DependentUpon>raicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMenuprincipal.resx">
+      <DependentUpon>formMenuprincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramaGrafica\formFuncion.resx">
+      <DependentUpon>formFuncion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolucionSEL\formSEL.resx">
+      <DependentUpon>formSEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramaGrafica\Gráfica.resx">
+      <DependentUpon>Gráfica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TabularFuncion.resx">
+      <DependentUpon>TabularFuncion.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fourier\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
